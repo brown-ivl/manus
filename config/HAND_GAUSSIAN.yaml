@@ -1,0 +1,28 @@
+defaults:
+  - trainer: trainer
+  - datasets/train@train_dataset: brics_dynamic
+  - datasets/test@test_dataset: test_dynamic
+  - model: hand_model
+  - _self_
+
+output_dir: "/users/cpokhari/data/users/cpokhari/neuralgrasp_outputs/${trainer.project}/${train_dataset.opts.subject}/${trainer.exp_name}"
+hydra:
+  run:
+    dir: ${output_dir}
+
+module:
+  _target_: src.modules.hand_dynamic.TrainingModule
+  opts: ${opts}
+  mode: ${trainer.mode}
+
+checkpoint:
+
+opts:
+  ckpt_name: "best"
+  losses: ['rgb_loss', 'ssim_loss']
+  loss_weight: [0.8, 0.2]
+  model: ${model}
+  train_dataset: ${train_dataset}
+  test_dataset: ${test_dataset}
+  trainer: ${trainer}
+  output_dir: ${output_dir}

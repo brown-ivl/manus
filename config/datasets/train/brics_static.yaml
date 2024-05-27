@@ -1,0 +1,14 @@
+_target_: src.datasets.brics_static.Dataset
+
+opts:
+  subject: 'angela'
+#  root_dir: "/users/cpokhari/data/users/cpokhari/static_data/output/red_car/"
+  root_dir: "/users/cpokhari/data/users/cpokhari/new_data/angela/objects/mug/"
+  params_dir: ""
+  width: 1280
+  height: 720
+  resize_factor: 1.0 ## Image resize factor. [0, 1]
+  bg_color: "white"
+  near: 0.01
+  far: 100
+  split_ratio: 0.99

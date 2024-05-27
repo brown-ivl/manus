@@ -1,0 +1,7 @@
+_target_: src.datasets.brics_dynamic.TestDataset
+
+resize_factor: 1.0
+color_bkgd_aug: "white"
+metadata_path: ./data/meta_data/teaser_metadata.pkl
+cam_path: ./data/camera_paths/real.pkl
+frame_sample_rate: 4

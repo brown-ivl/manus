@@ -1,0 +1,28 @@
+sh_degree: 3
+num_gaussians: 100000 # usually used just while inference
+sample_size: 10000 #For dynamic, it will be per bone
+position_lr_init : 0.0016
+position_lr_final : 0.0000016
+position_lr_delay_mult : 0.01
+position_lr_max_steps : 30000
+feature_lr : 0.0025
+opacity_lr : 0.05
+scaling_lr : 0.005
+rotation_lr : 0.001
+skinning_lr : 0.001
+percent_dense : 0.000001
+lambda_dssim : 0.2
+densification_interval : 100
+opacity_reset_interval : 3000
+densify: true
+densify_from_step : 100
+densify_until_step : 50000
+densify_grad_threshold : 0.0002
+start_lpips_iter : 1000
+min_opacity_threshold : 0.005
+size_threshold: 20
+remove_outliers_step: -1
+isotropic_scaling: false
+remove_seg_start: 0
+remove_seg_end: 1000
+condition_number: 0.4

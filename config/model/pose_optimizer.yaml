@@ -1,0 +1,11 @@
+_target_: src.models.pose_optimizer.PoseOptimizer
+opts:
+  optim_worst_cases_first: false ## Identifies the worst cases and optimize them first
+  cal_worst_cases_every_n_epochs: 20
+  plot_worst_cases: True
+  optim_n_worst_cases: 1
+  optim_iters: 100
+  num_pose_parameters: 23 #After applying euler constraints
+  optimize_global_R: false
+  optimize_global_T: false
+  vis_cam_names: ['brics-sbc-003_cam1']

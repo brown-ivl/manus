@@ -1,0 +1,20 @@
+_target_: src.datasets.brics_dynamic.Dataset
+
+opts:
+  subject: 'angela'
+  root_dir: "/users/cpokhari/data/datasets/MANUS_data/angela/grasps_hdf5/"
+  mano_wt_path: "/users/cpokhari/work/NeuralGrasp/data/mano/mano_rest.pkl"
+  width: 1280
+  height: 720
+  resize_factor: 1.0 ## Image resize factor. [0, 1]
+  bg_color: white
+  near: 0.01
+  far: 100
+  rand_views_per_timestep: -1 # training_steps: timestep; batch_size: input
+  #If '-1', then legacy mode, training_steps : (views * timestep); batch_size: 1
+  num_time_steps: 1 #-1 for all. Decide how many timestep you want for each sequence.
+  split_ratio: 0.99 #-1 for not splitting.
+  split_by_action: false #train/val split by action vs total data points
+  n_bones: 20
+  sequences: 'all' #(list) sequence name to train on
+

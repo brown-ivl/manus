@@ -1,0 +1,28 @@
+defaults:
+  - trainer: trainer
+  - datasets/train@train_dataset: brics_static
+  - datasets/test@test_dataset: test_static
+  - model: object_model
+  - _self_
+
+## Directory where checkpoints and output would be saved
+output_dir: "/users/cpokhari/data/users/cpokhari/neuralgrasp_outputs/${trainer.project}/${train_dataset.opts.subject}/${trainer.exp_name}"
+hydra:
+  run:
+    dir: ${output_dir}
+
+module:
+  _target_: src.modules.object.TrainingModule
+  opts: ${opts}
+  mode: ${trainer.mode}
+
+checkpoint:
+
+opts:
+  losses: ['rgb_loss', 'ssim_loss', 'isotropic_reg']
+  loss_weight: [0.8, 0.2, 0.1]
+  model: ${model}
+  train_dataset: ${train_dataset}
+  test_dataset: ${test_dataset}
+  trainer: ${trainer}
+  output_dir: ${output_dir}

@@ -1,0 +1,18 @@
+_target_: src.models.hand_gaussian.HandGaussianModel
+
+defaults:
+  - gaussian/gaussian@opts
+
+opts:
+  background_transform: true  # Will be set to True if skin weights are being learned
+  skin_weights_init_type: mano_init_voxel #"mano_init_voxel"/"mano_init_points"
+  extra_params_opt_iter_start: 10  #Iteration after which skinning weights are optimized
+  extra_params_opt_iter_freq: 10  #Iteration after which skinning weights are optimized
+  pose_opt_iter_start: 10  #Iteration after which skinning weights are optimized
+  prune_using_ball_pivoting: True
+  optimize_skin_wts: False
+  optimize_offsets: False
+  optimize_poses: False
+  grid_size: [1.1, 0.9, 0.65]
+  grid_res: 128
+  grid_offset: [0.0, 0.0, -0.03]

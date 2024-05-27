@@ -1,0 +1,14 @@
+_target_: src.datasets.brics_dynamic.TestDataset
+
+opts:
+  subject: 'angela'
+  resize_factor: 1.0
+  color_bkgd_aug: "white"
+  metadata_path: ./data/meta_data/novel_pose.pkl
+  cano_cam_path: ./data/camera_paths/cano_camera.pkl
+  cam_path: ./data/camera_paths/real.pkl
+  frame_sample_rate: 1
+  test_on_canonical_pose: false
+  test_on_train_dataset: false
+  worst_cases: false
+  contact_render_type: "results"   # gt_eval | acc_gt_eval only for composite

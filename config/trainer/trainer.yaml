@@ -1,0 +1,24 @@
+output_dir: 
+seed: 42
+gpus: [0]
+num_workers: 0
+batch_size: 1
+exp_name: test
+project:
+mode: train
+log_losses: true
+loggers: [csv] #wandb
+torch_compile_mode:
+accum_iter: 1
+##default, reduce-overhead, and max-autotune
+
+pl_vars:
+  max_steps: 200000
+  log_every_n_steps: 5
+  num_sanity_val_steps: 0
+  limit_train_batches: 1.0
+  limit_val_batches: 1.0
+  enable_progress_bar: true 
+  precision: 32
+  accumulate_grad_batches: 1
+  # strategy=strategy,

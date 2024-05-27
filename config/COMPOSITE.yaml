@@ -1,0 +1,35 @@
+defaults:
+  - trainer: trainer
+  - datasets/train@train_dataset: brics_dynamic
+  - datasets/test@test_dataset: test_dynamic
+  - model@hand_model: hand_model
+  - model@object_model: object_model
+  - _self_
+
+output_dir: ""
+hydra:
+  run:
+    dir: ${output_dir}
+
+module:
+  _target_: src.modules.composite.TrainingModule
+  opts: ${opts}
+  mode: ${trainer.mode}
+
+checkpoint:
+
+opts:
+  losses: ['rgb_loss', 'ssim_loss']
+  loss_weight: [0.8, 0.2]
+  optimize_hand: false
+  optimize_object: false
+  hand_module: src.modules.hand_dynamic.TrainingModule
+  object_module: src.modules.object.TrainingModule
+  hand_model: ${hand_model}
+  hand_ckpt_dir:
+  object_model: ${object_model}
+  object_ckpt_dir:
+  train_dataset: ${train_dataset}
+  test_dataset: ${test_dataset}
+  trainer: ${trainer}
+  output_dir: ${output_dir}
