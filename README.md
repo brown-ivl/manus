@@ -18,14 +18,20 @@ Apart from the conda env, we use `Blender` to get novel views during test time. 
 - `submodules` folder contains the differentiable rasterizer and knn provided by original Gaussian-Splatting repo. 
 
 ## MANUS-Grasps Dataset
-[To be released soon]
+[Full dataset to be released soon]
+
+Download small batch of dataset from [here](https://drive.google.com/drive/folders/15ihoMdU0PFUNkJSJxBpdrMy1lNT7fASu?usp=sharing)
+
+```
+import gdown
+gdown.download_folder(url = {url})
+```
 
 ## Dataset Info
 We follow the dataset directory structure like this, 
 
 ```
 ├── {SUBJECT}
-    ├── actions/
     ├── actions_hdf5/ 
     ├── bone_keypoints.ply
     ├── bone_lens.json

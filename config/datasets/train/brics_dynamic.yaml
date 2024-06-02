@@ -2,8 +2,8 @@ _target_: src.datasets.brics_dynamic.Dataset
 
 opts:
   subject: 'angela'
-  root_dir: "/users/cpokhari/data/datasets/MANUS_data/angela/grasps_hdf5/"
-  mano_wt_path: "/users/cpokhari/work/NeuralGrasp/data/mano/mano_rest.pkl"
+  root_dir: ""
+  mano_wt_path: ""
   width: 1280
   height: 720
   resize_factor: 1.0 ## Image resize factor. [0, 1]

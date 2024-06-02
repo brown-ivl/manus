@@ -2,13 +2,13 @@
 
 SUBJECT=$1
 
-DATA_DIR="/users/cpokhari/data/datasets/MANUS_data"
-EXP_DIR="/users/cpokhari/data/users/cpokhari/FastGaussians/object"
+DATA_DIR="/users/cpokhari/work/manus/MANUS_data"
+EXP_DIR="outputs/object"
 ROOT_DIR="${DATA_DIR}/${SUBJECT}"
 CALIB_DIR="${ROOT_DIR}/calib.object"
 
 ## For all the objects we want to train
-OBJS=("color1")
+OBJS=("books1")
 for OBJ_NAME in "${OBJS[@]}"
 do
   echo "Training $OBJ_NAME"

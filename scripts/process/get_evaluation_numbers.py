@@ -40,7 +40,7 @@ def main():
     subject = ['chandradeep', 'angel', 'zekun2']
     hand_sequences = ['test2', 'test1', 'test1']
 
-    root_dir = "/users/cpokhari/data/users/cpokhari/neuralgrasp_outputs"
+    root_dir = "outputs"
 
     for i, s in enumerate(subject):
         hand = hand_sequences[i]

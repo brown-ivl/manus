@@ -254,8 +254,6 @@ def render_single_object(ply_path, sc, out_path):
     create_shaders(obj.obj)
     sc.select_object(obj.name)
     bpy.ops.object.shade_smooth()
-    # bpy.ops.wm.save_as_mainfile(filepath='/users/cpokhari/work/NeuralGrasp/test.blend')
-    # exit(0)
     sc.render(path=out_path, animation=True)
 
 def dump_camera_ours(path, scene, camera):

@@ -3,7 +3,7 @@ _target_: src.datasets.brics_grasps.Dataset
 opts:
   subject: 'angela'
   grasp_path: ''
-  mano_wt_path: "/users/cpokhari/work/NeuralGrasp/data/mano/mano_rest.pkl"
+  mano_wt_path: ""
   width: 1280
   height: 720
   bg_color: white

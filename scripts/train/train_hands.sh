@@ -3,8 +3,8 @@
 SUBJECT=$1
 EXP_NAME=$2
 
-DATA_DIR="/users/cpokhari/data/datasets/MANUS_data"
-EXP_DIR="/users/cpokhari/data/users/cpokhari/FastGaussians/hand/${SUBJECT}/${EXP_NAME}"
+DATA_DIR="MANUS_data"
+EXP_DIR="outputs/hand/${SUBJECT}/${EXP_NAME}"
 ROOT_DIR="${DATA_DIR}/${SUBJECT}/actions_hdf5"
 
 WIDTH=1280

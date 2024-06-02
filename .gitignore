@@ -12,6 +12,8 @@ __pycache__/
 # Distribution / packaging
 submodules/*
 grasp_data/*
+MANUS_data/*
+outputs/*
 .Python
 build/
 develop-eggs/
