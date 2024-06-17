@@ -23,6 +23,9 @@ Dataset info is coming soon!!
 
 `
 aws s3 cp s3://manus-data/raw_videos/ <path_to_destination> --recursive --no-sign-request
+`
+
+`
 aws s3 cp s3://manus-data/annotationV0/ <path_to_destination> --recursive --no-sign-request
 `
 
