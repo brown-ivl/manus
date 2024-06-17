@@ -18,7 +18,14 @@ Apart from the conda env, we use `Blender` to get novel views during test time. 
 - `submodules` folder contains the differentiable rasterizer and knn provided by original Gaussian-Splatting repo. 
 
 ## MANUS-Grasps Dataset
-[Full dataset to be released soon]
+Full dataset can be used using these commands. `raw_videos` are the original captured videos from the BRICS capture system. `annotationV0` are the annotations for the raw videos. Further annotation version would include improved annotations. 
+Dataset info is coming soon!!
+
+`
+aws s3 cp s3://manus-data/raw_videos/ <path_to_destination> --recursive --no-sign-request
+aws s3 cp s3://manus-data/annotationV0/ <path_to_destination> --recursive --no-sign-request
+`
+
 
 Download small batch of dataset from [here](https://drive.google.com/drive/folders/15ihoMdU0PFUNkJSJxBpdrMy1lNT7fASu?usp=sharing)
 
