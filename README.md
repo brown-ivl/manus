@@ -4,7 +4,7 @@
 
 Chandradeep Pokhariya<sup>1</sup>, Ishaan N Shah <sup>1*</sup>, Angela Xing<sup>2*</sup>, Zekun Li<sup>2</sup>, Kefan Chen<sup>2</sup>, Avinash Sharma<sup>1</sup>, Srinath Sridhar <sup>2</sup>
 
-<sup>1</sup>CVIT, IIIT Hyderabad &nbsp;&nbsp; <sup>2</sup>Brown University &nbsp;&nbsp; sup>*</sup>Equal Contribution 
+<sup>1</sup>CVIT, IIIT Hyderabad &nbsp;&nbsp; <sup>2</sup>Brown University &nbsp;&nbsp; <sup>*</sup>Equal Contribution 
 
 ### [Project Page](https://ivl.cs.brown.edu/research/manus.html) · [Paper](https://arxiv.org/pdf/2312.02137)
 
