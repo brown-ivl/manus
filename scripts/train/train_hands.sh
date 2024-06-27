@@ -10,7 +10,6 @@ ROOT_DIR="${DATA_DIR}/${SUBJECT}/actions_hdf5"
 WIDTH=1280
 HEIGHT=720
 
-
 python main.py --config-name HAND_GAUSSIAN \
     output_dir=$EXP_DIR \
     trainer.loggers='[csv]' \

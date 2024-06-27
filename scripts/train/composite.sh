@@ -4,9 +4,9 @@ SUBJECT_NAME=$1
 HAND_EXP_NAME=$2
 MODE=$3 ##results/eval
 
-EXP_DIR="/users/cpokhari/data/users/cpokhari/FastGaussians"
+EXP_DIR="outputs"
+DATA_DIR="MANUS_data"
 ROOT_DIR="${DATA_DIR}/${SUBJECT}"
-DATA_DIR="/users/cpokhari/data/datasets/MANUS_data"
 
 ## Define the objects for which we want to do grasp capture. 
 ## Note that if you are using "eval" mode, then objs should be `green colored evaluation objects`
@@ -38,6 +38,6 @@ do
       exit
     fi
   elif [ "$MODE" == "results" ]; then
-    bash scripts/train/run_composite.sh $SUBJECT_NAME $EXP_NAME $HAND_EXP_DIR $OBJECT_EXP_DIR $OBJECT_EXP_NAME $GRASP_PATH $EXP_DIR "results"
+    bash scripts/train/run_composite.sh $SUBJECT_NAME $EXP_NAME $HAND_EXP_DIR $OBJECT_EXP_DIR $OBJECT_EXP_NAME $GRASP_PATH $EXP_DIR "results" $DATA_DIR
   fi
 done

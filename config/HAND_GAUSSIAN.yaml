@@ -19,8 +19,8 @@ checkpoint:
 
 opts:
   ckpt_name: "best"
-  losses: ['rgb_loss', 'ssim_loss']
-  loss_weight: [0.8, 0.2]
+  losses: ['rgb_loss', 'ssim_loss', 'isotropic_reg', 'lpips_loss']
+  loss_weight: [0.8, 0.2, 0.1, 0.1]
   model: ${model}
   train_dataset: ${train_dataset}
   test_dataset: ${test_dataset}

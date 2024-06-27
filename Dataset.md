@@ -1,7 +1,10 @@
 # MANUS-Grasps Dataset
 
-Full dataset can be used using these commands. `raw_videos` are the original captured videos from the [BRICS](https://ivl.cs.brown.edu/research/diva.html) capture system. `annotationsV0` are the annotations for the raw videos. Further annotation version would include improved annotations. 
-Dataset info is coming soon!!
+More detailed information coming!!
+
+Full dataset can be used using these commands. `raw_videos` are the original captured videos from the [BRICS](https://ivl.cs.brown.edu/research/diva.html) capture system. `annotationsV0` are the 1st version of annotations for the raw videos. Further annotation version would include improved annotations. 
+
+As of now, we are hosting dataset in the AWS. To downlaod the dataset, please use following commands. 
 
 ```
 aws s3 cp s3://manus-data/raw_videos/ <path_to_destination> --recursive --no-sign-request
@@ -9,23 +12,27 @@ aws s3 cp s3://manus-data/annotationsV0/ <path_to_destination> --recursive --no-
 ```
 
 ## Dataset Info
-We follow the dataset directory structure like this, 
+
+#### Raw Videos
+There are raw videos for 4 subjects. We showed results for first three subjects, however we release the 4th subject complimentary. Each subject contains the grasp videos from multi-views. 
+
+#### Annotations
 
 ```
 ├── {SUBJECT}
     ├── actions_hdf5/ 
+    ├── grasps/ 
+    ├── evals/ 
+    ├── objects/ 
     ├── bone_keypoints.ply
     ├── bone_lens.json
     ├── calib.actions/ 
     ├── calib.evals/ 
     ├── calib.grasps/ 
     ├── calib.object/ 
-    ├── evals/ 
-    ├── grasps/ 
     ├── mano_rest.pkl
     ├── mano_rest.ply
     ├── mano_shape.npz
-    ├── objects/ 
     └── rest_keypts.ply
 ```
 

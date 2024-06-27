@@ -78,36 +78,7 @@ class TrainingModule(BaseTrainingModule):
         return edict(pred)
 
     def training_step(self, batch, batch_idx):
-        opt = self.optimizers()
-        # opt = update_learning_rate(opt, self.model, self.global_step)
-        pred = self.render(batch)
-        final_loss = self.loss_func(batch, pred, self.opts.losses, self.opts.loss_weight, self.opts.trainer.log_losses)
-
-        self.manual_backward(final_loss)
-
-        if self.global_step < self.model.opts.skin_weights_opt_iter_start:
-            self.density_update(pred.density_update_dict)
-        else:
-            self.model.optimize_mlp = self.model.opts.skin_weights_opt_type == 'mlp_voxel'
-            if not self.model.optimize_mlp:
-                pass
-                # self.density_update(pred.density_update_dict)
-            else:
-                if self.model.lbsnet is None:
-                    self.model.setup_hash_mlp()
-                    self.trainer.optimizers[0].add_param_group({'params': self.model.lbsnet.parameters(),
-                                                                'lr': self.model.opts.skinning_lr,
-                                                                "name": "skin_weights"})
-
-                    self.trainer.optimizers[0].param_groups[0]['params'][0].requires_grad = False
-
-        opt.step()
-        opt.zero_grad(set_to_none=True)
-
-        self.log("loss", final_loss, sync_dist=True, batch_size=self.batch_size)
-        psnr_val = psnr(pred['render'], batch['rgb'][0])
-        self.log("train/psnr", psnr_val, sync_dist=True, batch_size=self.batch_size)
-        return {"loss": final_loss}
+        pass
 
     def render(self, batch):
         pred = self(batch)

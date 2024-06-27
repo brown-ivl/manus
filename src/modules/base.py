@@ -203,8 +203,6 @@ class BaseTrainingModule(LightningModule):
             self.lpips_vals = []
             self.render_time = []
 
-            breakpoint()
-
             for info in tqdm(infos):
                 action, frame_id, cam_name = info
                 batch = self.test_data.fetch_data_by_frame(action, frame_id, cam_name)
@@ -356,24 +354,6 @@ class BaseTrainingModule(LightningModule):
             )
 
             losses.isotropic_reg = isotropic_loss
-
-        if "bone_reg" in losses_dict:
-            losses.bone_reg = 0.0
-            if self.model.optimizing_skin_weights:
-                bones_rest = batch["bones_rest"]
-                sampled_pts = sample_on_bones(bones_rest.heads, bones_rest.tails, 10)
-                wts = self.model.get_skin_weights(sampled_pts.reshape(-1, 3))
-                wts = wts.reshape(sampled_pts.shape[0], sampled_pts.shape[1], -1)
-                wts_gt = torch.eye(wts.shape[0], wts.shape[-1])[:, None, :]
-                wts_gt = wts_gt.repeat(1, sampled_pts.shape[1], 1)
-                wts_gt = wts_gt.to(wts.device)
-                bone_reg = torch.nn.functional.mse_loss(wts, wts_gt, reduction="mean")
-                losses.bone_reg = bone_reg
-
-        if "offset_reg" in losses_dict:
-            losses.offset_reg = 0.0
-            if self.model.optimizing_offsets:
-                losses.offset_reg = self.offset_reg
 
         final_loss = 0
         for name, loss in losses.items():

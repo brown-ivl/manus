@@ -85,6 +85,7 @@ def animate_scene(path, scene, camera):
     all_data['intrs'] = intrs
     all_data['extrs'] = extrs
     joblib.dump(all_data, path)
+    print("Dumping to ", path)
 
 
 def main():
@@ -114,9 +115,9 @@ def main():
     sc.initialize_rendering_settings(rendering_settings)
     sc.initialize_image_settings(image_settings)
 
-    obj = sc.add_objects(ply_path)
-    sc.select_object(obj.name)
-    obj.set_origin_to("geometry")
+    # obj = sc.add_objects(ply_path)
+    # sc.select_object(obj.name)
+    # obj.set_origin_to("geometry")
     cam = bl.core.Camera("Camera")
     camera = cam.camera
 

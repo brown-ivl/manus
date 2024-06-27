@@ -8,7 +8,7 @@ OBJECT_EXP_NAME=$5
 GRASP_PATH=$6
 EXP_DIR=$7
 CONTACT_RENDER_TYPE=$8
-DATA_DIR="/users/cpokhari/data/datasets/MANUS_data"
+DATA_DIR=$9
 
 
 if [[ $CONTACT_RENDER_TYPE == "acc_gt_eval" ]]; then
@@ -43,7 +43,7 @@ python main.py --config-name COMPOSITE \
     opts.hand_ckpt_dir="${HAND_EXP_DIR}/checkpoints" \
     test_dataset.opts.frame_sample_rate=2 \
     test_dataset.opts.test_on_canonical_pose=false \
-    test_dataset.opts.cano_cam_path='./data/camera_paths/real.pkl' \
+    test_dataset.opts.cano_cam_path='./data/camera_paths/cano_camera.pkl' \
     test_dataset.opts.subject=$SUBJECT_NAME \
     hand_model.opts.skin_weights_init_type='mano_init_voxel' \
     hand_model.opts.sh_degree=3 \
