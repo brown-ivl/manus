@@ -2,7 +2,7 @@
 
 # <b>MANUS</b>: Markerless Grasp Capture using Articulated 3D Gaussians
 
-Chandradeep Pokhariya<sup>1</sup>, Ishaan N Shah <sup>1*</sup>, Angela Xing<sup>2*</sup>, Zekun Li<sup>2</sup>, Kefan Chen<sup>2</sup>, Avinash Sharma<sup>1</sup>, Srinath Sridhar <sup>2</sup>
+[Chandradeep Pokhariya](https://coreqode.github.io/)<sup>1</sup>, [Ishaan N Shah](https://ishaanshah.xyz/) <sup>1*</sup>, [Angela Xing](https://xing-angela.github.io/)<sup>2*</sup>, [Zekun Li](https://kunkun0w0.github.io/)<sup>2</sup>, [Kefan Chen](https://arthurchen0518.github.io/)<sup>2</sup>, [Avinash Sharma](https://3dcomputervision.github.io/about/)<sup>1</sup>, [Srinath Sridhar](https://cs.brown.edu/people/ssrinath/) <sup>2</sup>
 
 <sup>1</sup>CVIT, IIIT Hyderabad &nbsp;&nbsp; <sup>2</sup>Brown University &nbsp;&nbsp; <sup>*</sup>Equal Contribution 
 
@@ -56,12 +56,12 @@ bash scripts/train/train_object.sh {SUBJECT}
 
 To optimize hand module on our dataset. 
 ```
-bash scripts/train/train_hands_ours.sh {SUBJECT} {EXP_NAME}
+bash scripts/train/train_hands.sh {SUBJECT} {EXP_NAME}
 ```
 
-To composite the scene either for the grasp results of for the evaluation. 
+To composite the scene either for the grasp results of for the evaluation. Note that, you have to define objects sequence in the `composite.sh` script. 
 ```
-bash scripts/composite.sh {SUBJECT} {HAND_EXP_NAME} {results/eval}
+bash scripts/train/composite.sh {SUBJECT} {HAND_EXP_NAME} {results/eval}
 ```
 
 ## Citation

@@ -10,7 +10,7 @@ DATA_DIR="/users/cpokhari/data/datasets/MANUS_data"
 
 ## Define the objects for which we want to do grasp capture. 
 ## Note that if you are using "eval" mode, then objs should be `green colored evaluation objects`
-OBJS=("color1")
+OBJS=("books1")
 
 for OBJ_NAME in "${OBJS[@]}"
 do
