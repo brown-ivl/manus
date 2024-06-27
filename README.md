@@ -6,7 +6,7 @@
 
 <sup>1</sup>CVIT, IIIT Hyderabad &nbsp;&nbsp; <sup>2</sup>Brown University &nbsp;&nbsp; <sup>*</sup>Equal Contribution 
 
-### [Project Page](https://ivl.cs.brown.edu/research/manus.html) · [Paper](https://arxiv.org/pdf/2312.02137)
+### [Project Page](https://ivl.cs.brown.edu/research/manus.html) · [Paper](https://arxiv.org/pdf/2312.02137) . [Dataset](Dataset.md)
 
 </div>
 
