@@ -2,7 +2,7 @@
 
 More detailed information coming!!
 
-Full dataset can be used using these commands. `raw_videos` are the original captured videos from the [BRICS](https://ivl.cs.brown.edu/research/diva.html) capture system. `annotationsV0` are the 1st version of annotations for the raw videos. Further annotation version would include improved annotations. 
+Full dataset can be used using these commands. `raw_videos` are the original captured videos from the [BRICS](https://ivl.cs.brown.edu/research/diva.html) capture system. `annotationsV1` are the 1st version of annotations for the raw videos. Further annotation version would include improved annotations. 
 
 As of now, we are hosting dataset in the AWS. To downlaod the dataset, please use following commands. 
 
