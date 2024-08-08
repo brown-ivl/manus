@@ -8,7 +8,7 @@ As of now, we are hosting dataset in the AWS. To downlaod the dataset, please us
 
 ```
 aws s3 cp s3://manus-data/raw_videos/ <path_to_destination> --recursive --no-sign-request
-aws s3 cp s3://manus-data/annotationsV0/ <path_to_destination> --recursive --no-sign-request
+aws s3 cp s3://manus-data/annotationsV1/ <path_to_destination> --recursive --no-sign-request
 ```
 
 ## Dataset Info
