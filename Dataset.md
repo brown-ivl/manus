@@ -28,7 +28,7 @@ There are raw videos for 4 subjects. We showed results for first three subjects,
     ├── bone_lens.json
     ├── calib.actions/ 
     ├── calib.evals/ 
-    ├── calib.grasps/ 
+    ├── calib.grasps/ (Don't use for grasps. Instead use calib.object for grasps)
     ├── calib.object/ 
     ├── mano_rest.pkl
     ├── mano_rest.ply
