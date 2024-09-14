@@ -38,3 +38,6 @@ There are raw videos for 4 subjects. We showed results for first three subjects,
 
 - To optimize object module, we just requires multi-view images and camera parameters. Camera parameters can be found in `calib.object` folder. `optim_params.txt` file contains the camera parameters. And images can be found inside `object` folder. 
 - To optimize hand module, we use multi-view sequences of different hand poses. It can be found in `actions_hdf5` folder. 
+
+#### How to use MANO? 
+- Please check `scripts/dataset_helpers/load_videos.py` file on how to use MANO parameters with raw RGB data. 
