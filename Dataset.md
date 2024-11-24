@@ -17,15 +17,13 @@ aws s3 cp s3://manus-data/annotationsV1/ <path_to_destination> --recursive --no-
 There are raw videos for 4 subjects. We showed results for first three subjects, however we release the 4th subject complimentary. Each subject contains the grasp videos from multi-views. 
 
 #### Annotations
-
+There are no annotations for 4th subject as pose detection failed terribly with the gloved hand. 
 ```
 ├── {SUBJECT}
     ├── actions_hdf5/ 
     ├── grasps/ 
     ├── evals/ 
     ├── objects/ 
-    ├── bone_keypoints.ply
-    ├── bone_lens.json
     ├── calib.actions/ 
     ├── calib.evals/ 
     ├── calib.grasps/ (Don't use for grasps. Instead use calib.object for grasps)
@@ -33,11 +31,12 @@ There are raw videos for 4 subjects. We showed results for first three subjects,
     ├── mano_rest.pkl
     ├── mano_rest.ply
     ├── mano_shape.npz
-    └── rest_keypts.ply
 ```
 
 - To optimize object module, we just requires multi-view images and camera parameters. Camera parameters can be found in `calib.object` folder. `optim_params.txt` file contains the camera parameters. And images can be found inside `object` folder. 
 - To optimize hand module, we use multi-view sequences of different hand poses. It can be found in `actions_hdf5` folder. 
+- `evals` contain the ground truth contact annotations. 
+- `mano_rest.pkl` and `mano_rest.ply` are the mano parameters fitted to each subject's canonical pose. (Not needed as such.)
 
 #### How to use MANO? 
 - Please check `scripts/dataset_helpers/load_videos.py` file on how to use MANO parameters with raw RGB data. 
