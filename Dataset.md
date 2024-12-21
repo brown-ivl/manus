@@ -40,3 +40,6 @@ There are no annotations for 4th subject as pose detection failed terribly with 
 
 #### How to use MANO? 
 - Please check `scripts/dataset_helpers/load_videos.py` file on how to use MANO parameters with raw RGB data. 
+
+#### Pose Estimation
+- Please check `preprocess/README.md` for the pose estimation part of the data. 

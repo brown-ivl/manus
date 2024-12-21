@@ -43,8 +43,8 @@ def export_poses(output_dir, which, action, rest_poses_path):
 
 
 def main(): 
-    root_dir = "/users/cpokhari/data/datasets/BRICS/BRICS-DATA-02/neural-hands/chandradeep/"
-    params_path = "/users/cpokhari/data/datasets/MANUS_data/chandradeep/calib.object/optim_params.txt"
+    root_dir = "/users/cpokhari/data/datasets/BRICS/BRICS-DATA-02/neural-hands/subject0/"
+    params_path = "/users/cpokhari/data/datasets/MANUS_data/subject0/calib.object/optim_params.txt"
     output_dir = "./pose_outputs/"
     raw_action = "2023-10-26_session_bag1_grasp1"
     which = "grasps"
