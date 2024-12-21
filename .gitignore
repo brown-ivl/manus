@@ -13,6 +13,10 @@ __pycache__/
 submodules/*
 grasp_data/*
 MANUS_data/*
+mano_vis/*
+blender/*
+preprocess/pose_outputs/*
+data/mano/models
 outputs/*
 .Python
 build/

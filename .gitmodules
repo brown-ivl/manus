@@ -1,3 +1,6 @@
 [submodule "extern/manopth"]
 	path = extern/manopth
 	url = https://github.com/hassony2/manopth
+[submodule "preprocess/AlphaPose_mp"]
+	path = preprocess/AlphaPose_mp
+	url = git@github.com:Kristen-Z/AlphaPose_mp.git
